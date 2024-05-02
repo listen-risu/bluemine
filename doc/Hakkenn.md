@@ -43,3 +43,9 @@ response_to do |format|
   format.api....
   format.json...
 end
+
+・is_a?メソッド
+オブジェクトが指定されたクラスmodかサブクラスのインスタンスかを確かめるメソッド。
+
+・クラスメソッド内でfind_byなどメソッドを使用するとき、
+Model名.メソッドとせず、メソッド名だけで使用できる。
