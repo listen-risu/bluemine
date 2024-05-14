@@ -1,4 +1,43 @@
-<h2></h2>
+<script>
+  const dt = new Date()
+  const showMonthLimit = 3
+  const start_d = new Date(dt.getFullYear(),dt.getMonth(),0)
+  const end_d = new Dete(dt.getFullYear(),dt.getMonth()+showMonthLimit,0)
+  const gap = (end_d - start_d)/86400000
+</script>
+<div id="menu-bar">
+  <div id="top-menu">
+    <ul>
+      <li>ホーム</li>
+      <li>プロジェクト</li>
+      <li>ヘルプ</li>
+    </ul>
+  </div>
+  <div id="account">
+    <a>ログイン</a>
+  </div>
+</div>
+  <header>
+  <div id="quick-search">
+    <a>検索:</a>
+    <input type="text"/>
+    <div id="project-jump">プロジェクトへ移動...</div>
+  </div>
+    <h1>Redmineデモサイト - Bluemine -</h1>
+        <div id="main-menu" class="tabs">
+        <ul>
+            <li><a href="/projects">プロジェクト</a></li>
+            <li><a href="/issues">チケット</a></li>
+            <li><a href="/issues/gantt">ガントチャート</a></li>
+            <li class="selected"><a href="/issues/calendar">カレンダー</a></li>
+            </ul>
+        </div>
+</header>
+
+<div id="main">
+  <div id="content">
+    <h2>カレンダー</h2>
+    <h2></h2>
 
 <div id="query_form_with_buttons" class="hide-when-print">
 <div id="query_form_content">
@@ -27,3 +66,7 @@
   <span class="ending"></span>
   <span class="starting ending"></span>
 </p>
+
+
+  </div>
+</div>
