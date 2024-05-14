@@ -4,15 +4,22 @@ services:
     image: postgres
     container_name: db
     environment:
-      POSTGRES_HOST_AUTH_METHOD: 'trust' 
+      POSTGRES_HOST_AUTH_METHOD: 'trust'
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
   web:
     build:
       context: .
       dockerfile: Dockerfile
-    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    command: /bin/sh -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
-      - .:/myapp
+      - .:/rails  # ← プロジェクトのローカルディレクトリをマウント
     ports:
       - "3000:3000"
     depends_on:
       - db
+
+volumes:
+  db-data:
+    driver: local
