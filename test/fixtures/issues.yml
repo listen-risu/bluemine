@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  status: 1
+  category: 1
+  version: 1
+  files: 
+  watcher: 
+  start_at: 2024-05-14 08:47:46
+  end_at: 2024-05-14 08:47:46
+  estimated_man_month: 1
+  progress_rate: 1
+
+two:
+  title: MyString
+  description: MyText
+  status: 1
+  category: 1
+  version: 1
+  files: 
+  watcher: 
+  start_at: 2024-05-14 08:47:46
+  end_at: 2024-05-14 08:47:46
+  estimated_man_month: 1
+  progress_rate: 1
