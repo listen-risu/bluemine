@@ -1,0 +1,26 @@
+table {
+    border-spacing: 0;
+    width: 100%;
+}
+
+table th {
+    padding: 2px 16px 2px 0;
+    background-color: #eff1f9;
+    border-bottom: 2px solid #dfe8f1;
+    color: #4b5056;
+    vertical-align: middle;
+    font-weight: 700;
+    font-size: .73125rem;
+    line-height: 1.74;
+    white-space: nowrap;
+    height: 34px;
+}
+
+table tr th input#check_all {
+    width: 16px;
+    height: 16px;
+}
+
+table th a {
+    color: #169;
+}
