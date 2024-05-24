@@ -10,9 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_14_084207) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_24_060450) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "issues", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.integer "status"
+    t.integer "category"
+    t.integer "version"
+    t.json "files"
+    t.json "watcher"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.integer "estimated_man_month"
+    t.integer "progress_rate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "project_id", null: false
+    t.bigint "user_id", null: false
+    t.integer "tracker", limit: 2
+    t.integer "priority"
+    t.index ["project_id"], name: "index_issues_on_project_id"
+    t.index ["user_id"], name: "index_issues_on_user_id"
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string "name", null: false
@@ -31,6 +53,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_14_084207) do
     t.integer "last_otp_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "project_id"
+    t.index ["project_id"], name: "index_users_on_project_id"
   end
 
+  add_foreign_key "issues", "projects"
+  add_foreign_key "issues", "users"
+  add_foreign_key "users", "projects"
 end

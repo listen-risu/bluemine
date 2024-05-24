@@ -1,7 +1,6 @@
 html {
   padding: 0;
   margin: 0;
-
 }
 
 body {
@@ -11,8 +10,10 @@ body {
 }
 
 header {
-  background: radial-gradient(circle at 1.98% 20.98%, #4b6cb7, transparent 100%), radial-gradient(circle at 98.02% 20.98%, #2e4063, transparent 100%), radial-gradient(circle at 50% 50%, #19c8b5, #19c8b5 100%);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+  background: radial-gradient(circle at 1.98% 20.98%, #4b6cb7, transparent 100%),
+    radial-gradient(circle at 98.02% 20.98%, #2e4063, transparent 100%),
+    radial-gradient(circle at 50% 50%, #19c8b5, #19c8b5 100%);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   color: #fff;
   font-family: "Trebuchet MS", Verdana, sans-serif;
   min-height: 1em;
@@ -37,7 +38,7 @@ header h1 {
 }
 
 #quick-search a {
-  font-size: .8125rem;
+  font-size: 0.8125rem;
 }
 
 #quick-search input {
@@ -73,10 +74,11 @@ font-family:Meiryo,Hiragino Kaku Gothic Pro,Hiragino Sans,MS PGothic,Verdana,sys
 #menu-bar {
   background-color: #223342;
   color: white;
-  font-family: Meiryo, Hiragino Kaku Gothic Pro, Hiragino Sans, MS PGothic, Verdana, system-ui, sans-serif;
+  font-family: Meiryo, Hiragino Kaku Gothic Pro, Hiragino Sans, MS PGothic,
+    Verdana, system-ui, sans-serif;
   font-size: 10.4px;
   font-weight: bold;
-  height: 20.72px
+  height: 20.72px;
 }
 
 #top-menu {
@@ -94,6 +96,11 @@ font-family:Meiryo,Hiragino Kaku Gothic Pro,Hiragino Sans,MS PGothic,Verdana,sys
   display: inline-block;
   list-style-type: none;
   margin-right: 8px;
+}
+
+#menu-bar li a {
+  text-decoration: none;
+  color: white;
 }
 
 #account {
@@ -122,9 +129,10 @@ font-family:Meiryo,Hiragino Kaku Gothic Pro,Hiragino Sans,MS PGothic,Verdana,sys
   margin: 0;
   padding: 0;
 }
+
 #main-menu li {
   display: inline-block;
-  font-size: .8125rem;
+  font-size: 0.8125rem;
   list-style-type: none;
   padding: 8px 12px;
   position: relative;
@@ -132,7 +140,7 @@ font-family:Meiryo,Hiragino Kaku Gothic Pro,Hiragino Sans,MS PGothic,Verdana,sys
 
 #main-menu a {
   font-weight: 400;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   color: white;
   text-decoration-line: none;
 }
@@ -143,4 +151,38 @@ li.selected {
 
 #main {
   background-color: #fafcfe;
+}
+
+table td a {
+  color: #116699;
+  text-decoration: none;
+}
+
+table td {
+  font-size: 0.73125rem;
+}
+
+.pagination {
+  font-size: 0.8125rem;
+}
+.pagination__nav {
+  display: inline-block;
+}
+
+.pagination__page {
+  display: inline-block;
+}
+.pagination__next {
+  display: inline-block;
+}
+
+.pagination__prev {
+  display: inline-block;
+  border: solid 1px #ddd;
+  padding: 3px 8px;
+}
+
+.pagination__sentence {
+  display: inline-block;
+  color: #888;
 }

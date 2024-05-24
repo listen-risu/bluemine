@@ -61,8 +61,37 @@
       <th class="buttons"> </th>
       </tr>
     </thead>
+    <tbody>
+      <% @issues.each do |issue| %>
+        <tr>
+          <td>
+            <input type="checkbox" name="check_all" id="check_all" value="" class="toggle-selection" title="すべてにチェックをつける/すべてのチェックを外す">
+          </td>
+          <td><a href="#"><%= issue.id %></a></td>
+          <td><a href="#"><%= issue.project_name %></a></td>
+          <td>
+          <%= issue.tracker %>
+          </td>
+          <td>
+            <%= issue.status %>
+          </td>
+          <td><%= issue.priority %></td>
+          <td><a href="#"><%= issue.title %></a></td>
+          <td><a href="#"><%= issue.user_name %></a></td>
+          <td><%= issue.updated_at.strftime('%Y年%m月%d日%p%k時%m分') %></td>
+        <tr>
+      <% end %>
+    </tbody>
   </table>
-<span class="pagination"></span>
+<span class="pagination">
+  <div class="pagination__nav">
+    <div class="pagination__prev">« 前</div>
+    <div class="pagination__page current">1</div>
+    <div class="pagination__page">2</div>
+    <div class="pagination__next">次 »</div>
+  </div>
+  <div class="pagination__sentence"><%= "(1-25/)1ページに: 25" %>, <a href="/issues?per_page=50">50</a></div>
+</span>
 
 <div id="csv-export-options" style="display:none;">
   <h3 class="title"></h3>
